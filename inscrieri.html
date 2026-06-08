@@ -178,6 +178,20 @@
             width: 10em;
          }
       }
+
+      .radio-option {
+         display: flex;
+         align-items: center;
+         gap: 6px;
+      }
+
+      .radio-group {
+         display: flex;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         gap: 20px;
+}
+
    </style>
 </head>
 
@@ -192,8 +206,8 @@
       </div>
    </navbar>
    <h2 class="first-title" style="padding-top: 5%;margin-bottom: 0">Formular de înscrieri DevMe</h2>
-   <h2 class="taxaText" style="font-size: 3rem;margin-top: 0; color: red;">Înscrierile au luat sfârşit!</h2>
-   <!-- <h3 class="taxaText">Taxa pentru participarea la tabără este de 500 lei. Aceasta va fi plătită ulterior înscrierii,
+   <h2 class="taxaText" style="font-size: 3rem;margin-top: 0; color: green;">Înscrierile sunt deschise!</h2>
+   <h3 class="taxaText">Taxa pentru participarea la tabără este de 1000 lei. Aceasta va fi plătită ulterior înscrierii,
       după perioada de selecție.
    </h3>
    <div class="container">
@@ -201,87 +215,103 @@
          <p class="form-title">Câteva informaţii despre tine:</p>
          <label class="camp-name">1. Nume și prenume:</label>
          <input type="text" required name="Q1" class="camp-input">
-         <label class="camp-name">2. Şcoala şi oraşul în care înveţi:</label>
+         <label class="camp-name">2. Liceul și orașul la care înveți:</label>
          <input type="text" required name="Q2" class="camp-input">
-         <label class="camp-name">3. Email personal:</label>
-         <input type="email" required name="Q3" class="camp-input">
-         <label class="camp-name">4. Numărul de telefon personal:</label>
-         <input type="text" required name="Q4" class="camp-input">
-         <label class="camp-name">5. Numărul de telefon al unui pärinte sau tutore legal și numele acestuia:</label>
-         <p class="form-desc">Ex: Maria Popescu: 0700000000</p>
-         <input type="text" required name="Q5" class="camp-input">
-         <label class="camp-name">6. Link către o reţea de socializare</label>
-         <p class="form-desc">[Instagram (să nu fie profil privat), Facebook] Te rugăm să pui un link către profilul
-            tău, nu să ne dai numele/username-ul
-         </p>
-         <input type="url" required name="Q6" class="camp-input">
-         <p class="form-title">Now let's talk business:</p>
-         <label class="camp-name">7. În ce clasă ești? Ce specializare?</label>
+         <label class="camp-name">3. În ce clasă și la ce profil ești?</label>
          <p class="form-desc">A X-A/A XI-A, "Specializare"</p>
+         <input type="text" required name="Q3" class="camp-input">
+         <label class="camp-name">4. Email personal:</label>
+         <input type="email" required name="Q4" class="camp-input">
+         <label class="camp-name">5. Număr de telefon personal:</label>
+         <input type="text" required name="Q5" class="camp-input">
+         <label class="camp-name">6. Numărul de telefon și email-ul personal al unui părinte sau al tutorelui legal:</label>
+         <p class="form-desc">( ex: 0700000000: maria_popescu@mail.com)</p>
+         <input type="text" required name="Q6" class="camp-input">
+         <p class="form-title">Now let's talk business:</p>
+         <label class="camp-name">7. Ai vreo alergie intoleranță sau un regim alimentar special?</label>
          <input type="text" class="camp-input" name="Q7" id="clasa" required>
-         </select>
-         <label class="camp-name">8. Te-ai gândit la ce facultate vrei să te înscrii după terminarea liceului? Dacă da,
-            care este aceea și de ce?</label>
-         <p class="form-desc">(primele 3 optiuni)</p>
+         <label class="camp-name">8. Suferi de vreo boală cronică sau alte condiții medicale și te afli sub tratament medicamentos?</label>
          <input type="text" required name="Q8" class="camp-input">
-         <label class="camp-name">9. Ți-ar plăcea sa aplici la facultatea noastră? Dacă da, de ce?</label>
+         <label class="camp-name">9. Ai vreo problemă de sănătate care te împiedică să efectuezi activități fizice?</label>
          <input type="text" required name="Q9" class="camp-input">
-         <label class="camp-name">10. Cum te-ai descrie în câteva cuvinte?</label>
-         <input type="text" required name="Q10" class="camp-input">
-         <label class="camp-name">11. Care sunt hobby-urile tale sau ce îți place să faci în timpul liber?</label>
+         <label class="camp-name">10. Ești dispus să stai timp de o săptămână la cămin și să mănânci de la cantină?</label>
+         <div class="radio-group">
+            <div class="radio-option">
+               <input type="radio" required name="Q10" id="Q10_da" value="da">
+               <label for="Q10_da">Da</label>
+            </div>
+            <div class="radio-option">
+               <input type="radio" required name="Q10" id="Q10_nu" value="nu">
+               <label for="Q10_nu">Nu</label>
+            </div>
+         </div>
+         <label class="camp-name">11. Cum te-ai descrie în câteva cuvinte?</label>
          <input type="text" required name="Q11" class="camp-input">
-         <label class="camp-name">12. Ai mai participat în trecut la activități de dezvoltare personală, lucru în echipă
-            sau voluntariat? Dacă da, povestește-ne un moment care ți-a plăcut cel mai mult.</label>
-         <p class="form-desc">(ex. Un moment amuzant)</p>
+         <label class="camp-name">12. Care sunt hobby-urile tale?</label>
          <input type="text" required name="Q12" class="camp-input">
-         <label class="camp-name">13. Povestește un moment în care ai fost mândru de tine.</label>
+         <label class="camp-name">13. Ce calitate a ta crezi că i-ar ajuta cel mai mult pe ceilalți participanți din tabără?</label>
          <input type="text" required name="Q13" class="camp-input">
-         <label class="camp-name">14. De ce ai ales să te înscrii în tabăra de vară DevMe?</label>
+         <label class="camp-name">14. Din tot ce ai făcut până acum (la școală sau în afara ei), de care realizare ești cel mai mândru și de ce?</label>
          <input type="text" required name="Q14" class="camp-input">
-         <label class="camp-name">15. Ce așteptări ai de la această tabără? </label>
+         <label class="camp-name">15. Ai mai participat în trecut la activităti de dezvoltare personală, lucru în echipă sau voluntariat? Dacă da, povestește-ne un moment care ți-a plăcut cel mai mult.</label>
+         <p class="form-desc"> (ex. Un moment amuzant)</p>
          <input type="text" required name="Q15" class="camp-input">
-         <label class="camp-name">16. Cum te simți în situații noi sau în medii în care nu cunoști pe nimeni?</label>
-         <input type="text" required name="Q16" class="camp-input">
-         <label class="camp-name">17. Cum ai gestiona un conflict între 2 persoane? Dar dacă tu ai fi una dintre
-            persoane, ce ai face?</label>
+         <label class="camp-name">16. Te-ai gândit să aplici la facultatea noastră după terminarea liceului?</label>
+         <div class="radio-group">
+            <div class="radio-option">
+               <input type="radio" required name="Q16" id="Q16_da" value="da">
+               <label for="Q16_da">Da</label>
+            </div>
+            <div class="radio-option">
+               <input type="radio" required name="Q16" id="Q16_nu" value="nu">
+               <label for="Q16_nu">Nu</label>
+            </div>
+         </div>
+         <label class="camp-name">17. De ce îți dorești să participi de tabăra de vară DevMe?</label>
          <input type="text" required name="Q17" class="camp-input">
-         <label class="camp-name">18. Te consideri o persoană empatică? Dacă da, de ce?</label>
+         <label class="camp-name">18. Ce așteptări ai de la tabăra noastră?</label>
          <input type="text" required name="Q18" class="camp-input">
-         <label class="camp-name">19. Te consideri o persoană sociabilă? Dacă da, de ce?</label>
+         <label class="camp-name">19. Care crezi că va fi cea mai mare provocare pentru tine în această tabără?</label>
          <input type="text" required name="Q19" class="camp-input">
-         <label class="camp-name">20. Te descurci sa lucrezi într-o echipă? Care ar fi aptitudinile care te-ar ajuta în
-            acest caz?</label>
+         <label class="camp-name">20. Cum te descurci atunci când trebuie sa lucrezi în echipă?</label>
          <input type="text" required name="Q20" class="camp-input">
-         <label class="camp-name">21. Cum arată pentru tine o zi reușită?</label>
+         <label class="camp-name">21. Consideri că iți va fi greu să te integrezi într-o nouă echipă? De ce?</label>
          <input type="text" required name="Q21" class="camp-input">
-         <label class="camp-name">22. Ești dispus să stai timp de o săptămână la cămin și să mănânci la cantină?</label>
+         <label class="camp-name">22. Ce faci când atmosfera din echipă devine tensionată? Cum procedezi dacă tu ești persoana care nu rezonează cu cineva?</label>
          <input type="text" required name="Q22" class="camp-input">
-         <label class="camp-name">23. Ai vreo alergie, intoleranță sau restricție alimentară?</label>
-         <input type="text" required name="Q23" class="camp-input">
-         <label class="camp-name">24. Suferi de o boalã cronică sau alte condiții medicale și te afli sub tratament
-            medicamentos?</label>
-         <input type="text" required name="Q24" class="camp-input">
-         <label class="camp-name">25. Ai vreo problemã de sănătate care te impiedică să efectuezi activități
-            fizice?</label>
-         <input type="text" required name="Q25" class="camp-input">
-         <label class="camp-name">26. Esti sigur(ă) că vei fi liber(ă) în perioada taberei (6-13 iulie)?</label>
-         <input type="text" required name="Q26" class="camp-input">
+         <label class="camp-name">23. Esti sigur(ă) că vei fi liber(ă) in perioada taberei (4-12 iulie)?</label>
+         <div class="radio-group">
+            <div class="radio-option">
+               <input type="radio" required name="Q23" id="Q23_da" value="da">
+               <label for="Q23_da">Da</label>
+            </div>
+            <div class="radio-option">
+               <input type="radio" required name="Q23" id="Q23_nu" value="nu">
+               <label for="Q23_nu">Nu</label>
+            </div>
+         </div>
          <p class="form-title">Mai sus ne-ai oferit nişte informaţii personale, aşa că vrem să te întrebăm următorul
             lucru:
          </p>
-         <label class="camp-name">27. Ești de acord ca LSAC sã prelucreze datele tale personale menționate anterior în
+         <label class="camp-name">24. Ești de acord ca LSAC sã prelucreze datele tale personale menționate anterior în
             concordantã cu regulamentele UE GDPR în vigoare?</label>
          <p class="form-desc">GDPR se referă la protecţia datelor cu caracter personal pe care tu le-ai împărtăşit cu
             Liga Studenţilor Facultăţii de Automatică şi Calculatoare din Iaşi. Poţi citi mai multe aici: <a
                href="https://mfe.gov.ro/informatii-de-interes-public/solicitare-informatii-legislatie/protectia-datelor-cu-caracter-personal-gdpr/"
                target="_blank">Protecţia datelor cu caracter personal</a>
          </p>
-         <span>
-            <input type="checkbox" required name="Q27" id="GDPR">
-            <label for="Q27">Da</label>
-         </span>
+         <div class="radio-group">
+            <div class="radio-option">
+               <input type="radio" required name="Q24" id="Q24_da" value="da">
+               <label for="Q24_da">Da</label>
+            </div>
+            <div class="radio-option">
+               <input type="radio" required name="Q24" id="Q24_nu" value="nu">
+               <label for="Q24_nu">Nu</label>
+            </div>
+         </div>
          <input type="submit" id="submit" value="Submit" class="sender">
-      </form> -->
+      </form>
    </div>
    <div class="footer" id="footer">
       <div class="upper-footer">
@@ -292,10 +322,10 @@
                o studenție cât mai frumoasă prin intermediul activităților ce sunt organizate anual.
             </p>
             <span>
-               <p>Radu-Ștefan Munteanu: <span class="footer-tel">0763 448 072</span></p>
-               <p>Tudor-Dumitru Manea: <span class="footer-tel">0773 966 140</span></p>
-               <p>Constantin-Dumitru Buțco: <span class="footer-tel">0744 706 501</span></p>
-            </span>
+                    <p>Roca Cristian: <span class="footer-tel">0774 035 464</span></p>
+                    <p>Afrasinei Ana: <span class="footer-tel">0787 532 901</span></p>
+                    
+                </span>
          </div>
          <div class="rsection">
             <form class="footer-form" method="POST" action="mail-handler.php">
@@ -318,7 +348,7 @@
       <div class="lower-footer">
          <div class="lelement">
             <a href="https:\\lsaciasi.ro" target="_blank">
-               <img src="img/logo/LSAC/LSAC alb.png">
+               <img src="img/logo/LSAC/LSAC alb_nou.png">
             </a>
          </div>
          <div class="melement">
@@ -333,12 +363,12 @@
                <a href="https:\\lsaciasi.ro/contact.html" target="_blank">LSAC contact</a>
             </div>
             <div class="copyright">
-               <p>Copyright &#169;2025 All rights reserved to LSAC Iasi</p>
+               <p>Copyright &#169;2026 All rights reserved to LSAC Iasi</p>
             </div>
          </div>
          <div class="relement">
             <a href="https://ac.tuiasi.ro/" target="_blank">
-               <img src="img/logo/AC_Iasi.png">
+               <img src="img/logo/AC_Iasi_nou.png" style="height: 85px; width: auto; position: relative; top: -15px;">
             </a>
          </div>
       </div>
@@ -359,7 +389,7 @@
    <script type="text/javascript">
       const form = document.querySelector("#form")
       const submitButton = document.querySelector("#submit")
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbza_KxGsKgib_eExP2XzjrxA9vZ9nSPFwNFPZCOAW0KP606xuNHNblolMLRDJreNc87gA/exec'
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzAqF9UaCn-v1vwan0B-jpLz9v7N5f2TxYgpZKhHKEHZ6tBVvm55QPWhDmahfUsqQ/exec'
 
       form.addEventListener('submit', e => {
          submitButton.disabled = true

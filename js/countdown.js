@@ -23,7 +23,7 @@ var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 if(seconds < 0)
-	document.getElementById("countdown").innerHTML = " Event is finished ";
+	document.getElementById("countdown").innerHTML = " ";
 else
 	document.getElementById("countdown").innerHTML = " " + days + "d " + hours + "h " + minutes + "m " + seconds + "s  ";
 
@@ -77,7 +77,7 @@ var x = setInterval(function() {
 
     clearInterval(x);
 
-    document.getElementById("countdown").innerHTML = " Event is finished ";
+    document.getElementById("countdown").innerHTML = "  ";
 
   }
 
