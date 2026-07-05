@@ -30,7 +30,8 @@
     <navbar class="navbar">
         <div class="navContainer">
             <a href="#info" class="navitem">Informatii</a>
-            <a href="#calendar" class="navitem">Calendar</a>
+            <a href="#news" class="navitem">News</a>
+            <!--<a href="#calendar" class="navitem">Calendar</a>-->
 
             <img class="navlogo" src="img/devme_2026.png">
 
@@ -46,11 +47,66 @@
 
         <div class="navButtons" id="n-btns">
             <a href="#info" class="navitem">Informații</a>
-            <a href="#calendar" class="navitem">Calendar</a>
+            <a href="#news" class="navitem">News</a>
+            <!--<a href="#calendar" class="navitem">Calendar</a>-->
             <a href="#sponsori" class="navitem">Sponsori</a>
             <a href="#footer" class="navitem">Contact</a>
         </div>
     </navbar>
+
+    <!-- ============ NEWS ============ -->
+    <div class="news-section" id="news">
+        <div class="news-section__intro">
+            <!--<p class="news-kicker">News</p>-->
+            <h1 >News</h1>
+        </div>
+
+        <div class="news-feed">
+            <article class="news-post">
+                <div class="news-post__header">
+                    <div class="news-post__avatar">D</div>
+                    <div class="news-post__meta">
+                        <h3>Ziua 0</h3>
+                        <p>DevelopMe • activități și momente</p>
+                    </div>
+                    <button class="news-post__open" type="button" aria-label="Deschide galeria" data-gallery="gallery-day-1">+</button>
+                </div>
+                <div class="news-post__gallery" id="gallery-day-1">
+                    <img src="ziua_0/DJI_20260704193435_0468_D.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/DJI_20260704193435_0468_D.jpeg">
+                    <img src="ziua_0/DJI_20260704200430_0491_D.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/DJI_20260704200430_0491_D.jpeg">
+                    <img src="ziua_0/DJI_20260704200606_0494_D.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/DJI_20260704200606_0494_D.jpeg">
+                    <img src="ziua_0/DJI_20260704200715_0501_D.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/DJI_20260704200715_0501_D.jpeg">
+                    <img src="ziua_0/DJI_20260704200803_0504_D.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/DJI_20260704200803_0504_D.jpeg">
+                    <img src="ziua_0/DJI_20260704200940_0514_D.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/DJI_20260704200940_0514_D.jpeg">
+                    <img src="ziua_0/IMG_8570.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8570.jpeg">
+                    <img src="ziua_0/IMG_8571.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8571.jpeg">
+                    <img src="ziua_0/IMG_8573.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8573.jpeg">
+                    <img src="ziua_0/IMG_8575.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8575.jpeg">
+                    <img src="ziua_0/IMG_8583.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8583.jpeg">
+                    <img src="ziua_0/IMG_8584.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8584.jpeg">
+                    <img src="ziua_0/IMG_8586.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8586.jpeg">
+                    <img src="ziua_0/IMG_8591.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8591.jpeg">
+                    <img src="ziua_0/IMG_8595.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8595.jpeg">
+                    <img src="ziua_0/IMG_8599.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8599.jpeg">
+                    <img src="ziua_0/IMG_8600.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8600.jpeg">
+                    <img src="ziua_0/IMG_8607.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8607.jpeg">
+                    <img src="ziua_0/IMG_8624.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8624.jpeg">
+                    <img src="ziua_0/IMG_8642.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8642.jpeg">
+                    <img src="ziua_0/IMG_8646.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8646.jpeg">
+                    <img src="ziua_0/IMG_8666.jpeg" alt="Ziua 0 - DevMe moment" data-full="ziua_0/IMG_8666.jpeg">
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="news-modal" id="newsModal" aria-hidden="true">
+        <button class="news-modal__close" type="button" aria-label="Închide">×</button>
+        <div class="news-modal__content">
+            <button class="news-modal__nav news-modal__nav--prev" type="button" aria-label="Poza anterioară">‹</button>
+            <img id="newsModalImage" src="" alt="">
+            <button class="news-modal__nav news-modal__nav--next" type="button" aria-label="Poza următoare">›</button>
+        </div>
+    </div>
 
     <!-- ============ HOME ============ -->
     <div class="home">
@@ -536,6 +592,112 @@
     <script src="js/info.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/top.js"></script>
+    <script>
+        const modal = document.getElementById('newsModal');
+        const modalImage = document.getElementById('newsModalImage');
+        const openButtons = document.querySelectorAll('.news-post__open');
+        const closeButton = document.querySelector('.news-modal__close');
+        const prevButton = document.querySelector('.news-modal__nav--prev');
+        const nextButton = document.querySelector('.news-modal__nav--next');
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openModal(images, startIndex) {
+            currentImages = images;
+            currentIndex = startIndex;
+            modalImage.src = currentImages[currentIndex].dataset.full || currentImages[currentIndex].src;
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        function initNewsGallery() {
+            const gallery = document.getElementById('gallery-day-1');
+            if (!gallery) return;
+
+            const allImages = Array.from(gallery.querySelectorAll('img'));
+            const previewCount = 3;
+            if (!allImages.length) return;
+
+            const shuffled = allImages
+                .map((img) => ({ img, order: Math.random() }))
+                .sort((a, b) => a.order - b.order)
+                .map((item) => item.img);
+
+            const previewImages = shuffled.slice(0, previewCount);
+            const hiddenImages = shuffled.slice(previewCount);
+
+            hiddenImages.forEach((img) => img.classList.add('hidden'));
+            previewImages.forEach((img) => img.classList.remove('hidden'));
+
+            const moreCard = document.createElement('button');
+            moreCard.type = 'button';
+            moreCard.className = 'news-post__more-card';
+            moreCard.innerHTML = '<span class="news-post__more-card__content"><span class="news-post__more-card__icon">+</span><span class="news-post__more-card__text">Vezi toate pozele</span></span>';
+            moreCard.addEventListener('click', () => openModal(allImages, 0));
+
+            // place 3 preview photos and a plus-card in a 2x2 grid, with plus-card bottom-left
+            gallery.innerHTML = '';
+            previewImages[0].classList.add('news-post__preview-first');
+            previewImages[1].classList.add('news-post__preview-second');
+            previewImages[2].classList.add('news-post__preview-third');
+            gallery.appendChild(previewImages[0]);
+            gallery.appendChild(previewImages[1]);
+            gallery.appendChild(moreCard);
+            gallery.appendChild(previewImages[2]);
+        }
+
+        function showNextImage(direction) {
+            currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
+            modalImage.src = currentImages[currentIndex].dataset.full || currentImages[currentIndex].src;
+        }
+
+        openButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const gallery = document.getElementById(button.dataset.gallery);
+                const images = gallery ? Array.from(gallery.querySelectorAll('img')) : [];
+                if (images.length) {
+                    openModal(images, 0);
+                }
+            });
+        });
+
+        document.querySelectorAll('.news-post__gallery img').forEach((img) => {
+            img.addEventListener('click', () => {
+                const images = Array.from(img.closest('.news-post__gallery').querySelectorAll('img:not(.hidden)'));
+                const allImages = Array.from(img.closest('.news-post__gallery').querySelectorAll('img'));
+                const startIndex = allImages.indexOf(img);
+                openModal(allImages, startIndex);
+            });
+        });
+
+        closeButton.addEventListener('click', closeModal);
+        prevButton.addEventListener('click', () => showNextImage(-1));
+        nextButton.addEventListener('click', () => showNextImage(1));
+
+        initNewsGallery();
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (!modal.classList.contains('is-open')) return;
+            if (event.key === 'Escape') {
+                closeModal();
+            } else if (event.key === 'ArrowRight') {
+                showNextImage(1);
+            } else if (event.key === 'ArrowLeft') {
+                showNextImage(-1);
+            }
+        });
+    </script>
 </body>
 
 </html>
