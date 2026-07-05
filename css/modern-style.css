@@ -1,6 +1,5 @@
 /* Modern Styles for DevMe Website */
 :root {
-  /* Modern color palette */
   --primary: #F8C401;
   --primary-dark: #e0b100;
   --secondary: #2563EB;
@@ -11,26 +10,19 @@
   --light-gray: #E0E0E0;
   --text-primary: #F8F9FA;
   --text-secondary: #D1D5DB;
-  
-  /* Modern gradients */
   --gradient-gold: linear-gradient(135deg, #F8C401 0%, #FFA500 100%);
   --gradient-dark: linear-gradient(135deg, #121212 0%, #1E1E1E 100%);
   --gradient-blue: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
-  
-  /* Modern shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   --shadow-gold: 0 5px 15px rgba(248, 196, 1, 0.3);
-  
-  /* Updated spacing */
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
 }
 
-/* Global modern styles */
 body {
   background-color: var(--dark);
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
@@ -39,7 +31,6 @@ body {
   overflow-x: hidden !important;
 }
 
-/* Modern typography */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   line-height: 1.2;
@@ -57,7 +48,7 @@ h2 {
   font-weight: 700;
   position: relative;
   padding-top: 2%;
-  padding-bottom: 2%/*var(--spacing-md)*/;
+  padding-bottom: 2%;
 }
 
 h2::after {
@@ -71,44 +62,37 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Modern buttons */
 .homebutton {
-  background: var(--gradient-gold) !important;
-  color: var(--dark) !important;
-  padding: 0.7rem 1.5rem !important;
-  border-radius: 8px !important;
-  font-weight: 700 !important;
-  font-size: 1rem !important;
-  border: 2px solid transparent !important;
-  transition: all 0.3s ease !important;
-  box-shadow: var(--shadow-gold) !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  position: relative !important;
-  overflow: hidden !important;
-  z-index: 1 !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  text-align: center !important;
-  max-width: 180px !important;
-  animation: buttonReveal 0.4s ease-out 0.9s forwards !important;
+  background: var(--gradient-gold);
+  color: var(--dark);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  max-width: 180px;
+  animation: buttonReveal 0.4s ease-out 0.9s forwards;
   opacity: 0;
 }
 
 .homebutton:hover {
-  border-color: var(--primary) !important;
-  background: transparent !important;
-  color: var(--primary) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 7px 15px rgba(248, 196, 1, 0.3) !important;
+  border-color: var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 15px rgba(248, 196, 1, 0.3);
 }
 
-/* Eliminarea efectului ::after complex */
-.homebutton::after {
-  display: none !important;
-}
-
-/* Revenim la un efect simplu pentru hover */
 .homebutton::before {
   content: '';
   position: absolute;
@@ -125,25 +109,25 @@ h2::after {
   left: 0;
 }
 
-/* Media queries pentru butonul hero */
 @media screen and (min-width: 650px) {
   .homebutton {
-    padding: 0.75rem 1.5rem !important;
-    font-size: 1.1rem !important;
-    max-width: 200px !important;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    max-width: 200px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .homebutton {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.9rem !important;
-    max-width: 150px !important;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    max-width: 150px;
   }
 }
 
-/* Stilizare pentru celelalte butoane */
-.form-submit, #myBtn, .sender {
+.form-submit,
+#myBtn,
+.sender {
   background: var(--gradient-gold);
   color: var(--dark);
   padding: 0.75rem 1.5rem;
@@ -157,14 +141,22 @@ h2::after {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.form-submit:hover, #myBtn:hover, .sender:hover {
+.form-submit:hover,
+#myBtn:hover,
+.sender:hover {
   transform: translateY(-2px);
   box-shadow: 0 7px 20px rgba(248, 196, 1, 0.4);
 }
 
-.form-submit::before, #myBtn::before, .sender::before {
+.form-submit::before,
+#myBtn::before,
+.sender::before {
   content: '';
   position: absolute;
   top: 0;
@@ -176,27 +168,19 @@ h2::after {
   z-index: -1;
 }
 
-.form-submit:hover::before, #myBtn:hover::before, .sender:hover::before {
+.form-submit:hover::before,
+#myBtn:hover::before,
+.sender:hover::before {
   left: 0;
 }
 
-/* Stilizare îmbunătățită pentru butonul din footer */
 .form-submit {
-  background: var(--gradient-gold);
-  color: var(--dark);
-  padding: 0.7rem 1.2rem;
   border-radius: 10px;
   font-weight: 700;
   font-size: 0.9rem;
   border: 2px solid transparent;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 5px 15px rgba(248, 196, 1, 0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  cursor: pointer;
   margin-top: 1rem;
 }
 
@@ -229,10 +213,8 @@ h2::after {
   transform: translateX(100%);
 }
 
-/* News feed */
 .news-section {
   padding: calc(80px + 1.2rem) 0.75rem 4rem;
-  margin-top: 0;
   background: linear-gradient(135deg, rgba(248, 196, 1, 0.08), rgba(37, 99, 235, 0.08));
   border-bottom: 1px solid rgba(248, 196, 1, 0.16);
 }
@@ -340,50 +322,27 @@ h2::after {
   font-size: 0.9rem;
 }
 
-/*.news-post__gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(240px, 1fr));
-  gap: 0.75rem;
-  padding: 0.5rem 0.75rem 0.75rem;
-  width: 100%;
-  margin: 0 auto;
-}*/
-.news-post__gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Taie fin din margini ca să nu deformeze poza */
-  border-radius: 12px; /* Opțional, dacă vrei colțuri rotunjite ca în design */
-}
 .news-post__gallery {
   display: grid;
-  /* 1. Reparăm eroarea adăugând px */
-  grid-template-columns: repeat(2, minmax(0px, 1fr)); 
-  grid-template-rows: repeat(2, minmax(240px, 1fr));
-  gap: 0.75rem;
-  padding: 0.5rem 0.75rem 0.75rem;
-  
-  /* 2. Limităm lățimea maximă pentru ca grid-ul să nu devină uriaș */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
   width: 100%;
-  max-width: 510px; /* Ajustează valoarea asta ca să arate cum îți place */
-  
-  /* 3. Margin auto va împinge grid-ul fix pe mijlocul divului părinte */
-  margin: 0 auto; 
+  max-width: 560px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: visible;
 }
-@media (maxwidth:500px) {
-  .news-post__gallery{
-      grid-template-columns: repeat(1,minmax(0,1fr));
-  }
-  
-} 
-.news-post__gallery img,
-.news-post__more-card {
+
+.news-post__gallery > div,
+.news-post__gallery > img,
+.news-post__gallery > article {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 240px;
+  object-fit: cover;
   border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  display: block;
+  box-sizing: border-box;
 }
 
 .news-post__gallery img {
@@ -409,6 +368,11 @@ h2::after {
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
   grid-area: 2 / 2 / 3 / 3;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
 }
 
 .news-post__preview-first {
@@ -444,53 +408,31 @@ h2::after {
   font-size: 0.95rem;
   opacity: 0.88;
 }
-/* CONTAINERUL GALERIEI */
-.news-post__gallery {
-  display: grid;
-  /* Pe desktop/tablete avem 2 coloane perfect egale */
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: auto;
-  gap: 1rem;
-  padding: 1rem;
-  
-  /* Centrare perfectă a întregului bloc */
-  width: 100%;
-  max-width: 560px; /* Limitează lățimea pe ecrane mari */
-  margin: 0 auto;    /* Împinge tot gridul pe mijlocul divului părinte */
-  
-  box-sizing: border-box;
-  
-  /* Asigurăm că fundalul se extinde pentru a cuprinde toate pozele */
-  overflow: visible;
-  height: auto;
-}
 
-/* ELEMENTELE DIN INTERIOR (Imaginile și cardul cu text) */
-.news-post__gallery > div,
-.news-post__gallery > img,
-.news-post__gallery > article {
-  width: 100%;
-  height: 240px;       /* Înălțime fixă pentru uniformitate */
-  object-fit: cover;   /* Decupează inteligent pozele */
-  border-radius: 14px; /* Colțuri rotunjite uniform */
-  box-sizing: border-box;
-}
-
-/* RESPONSIVITATE PENTRU MOBIL */
 @media (max-width: 500px) {
   .news-post__gallery {
-    /* Pe ecrane mici, trecem la o singură coloană */
-    grid-template-columns: repeat(1,minmax(0px,1fr));
-    grid-template-rows: auto;
-    max-width: 340px; /* Dimensiune optimă pentru mobil */
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    /*max-width: 340px;*/
   }
-  
+
   .news-post__gallery > div,
   .news-post__gallery > img,
   .news-post__gallery > article {
-    height: 280px; /* Facem elementele puțin mai înalte pe mobil */
+    height: 280px;
+  }
+
+  .news-section {
+    padding: 1rem 0.8rem 3rem;
+  }
+
+  .news-post__header {
+    padding: 0.85rem 0.85rem 0.6rem;
   }
 }
+
 @media (min-width: 720px) {
   .news-post__gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -560,24 +502,6 @@ h2::after {
   right: 1rem;
 }
 
-@media screen and (max-width:500px) {
-  .news-section {
-    padding: 1rem 0.8rem 3rem;
-  }
-
-  .news-post__header {
-    padding: 0.85rem 0.85rem 0.6rem;
-  }
-
-  .news-post__gallery {
-  
-    display: grid;
-    grid-template-columns: 1fr; 
-    
-  }
-}
-
-/* Stilizare pentru formularul din footer */
 .footer-form {
   display: flex;
   flex-direction: column;
@@ -616,14 +540,13 @@ h2::after {
   box-shadow: 0 0 0 2px rgba(248, 196, 1, 0.2);
 }
 
-/* Media queries pentru butoanele din footer */
 @media (max-width: 768px) {
   .form-submit {
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
     width: 100%;
   }
-  
+
   .footer-form input[type="email"],
   .footer-form input[type="text"] {
     padding: 0.6rem 0.8rem;
@@ -638,7 +561,6 @@ h2::after {
   }
 }
 
-/* Modern navbar */
 .navbar {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -671,10 +593,8 @@ h2::after {
   width: 80%;
 }
 
-/* Modern cards for info section */
 .i-signs {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   width: 90%;
@@ -723,7 +643,7 @@ h2::after {
 }
 
 .i-signs > div:hover {
-  transform: scale(1.03) translateY(-3px) !important;
+  transform: scale(1.03) translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
   border-color: rgba(248, 196, 1, 0.6);
   z-index: 10;
@@ -773,11 +693,9 @@ h2::after {
   color: var(--text-primary);
 }
 
-/* Stil pentru prețuri ajustat pentru spațiere mai bună */
 .i-howMuch span[style*="text-decoration: line-through"] {
   color: #ff4444;
   font-size: 1rem;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-right: 0.3rem;
 }
 
@@ -785,24 +703,22 @@ h2::after {
   color: #4CAF50;
   font-size: 1.1rem;
   font-weight: 700;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .i-signs > div:hover span[style*="font-weight: bold"] {
   transform: scale(1.1);
 }
 
-/* Media queries îmbunătățite pentru responsivitate */
 @media (max-width: 992px) {
   .i-signs {
     width: 95%;
     gap: 0.8rem;
   }
-  
+
   .i-signs > div {
     padding: 1.2rem 0.8rem;
   }
-  
+
   .i-signs h4 {
     font-size: 1.4rem;
   }
@@ -813,63 +729,27 @@ h2::after {
     flex-direction: column;
     width: 90%;
   }
-  
+
   .i-signs > div {
-    /* width: 100%; */
     max-width: 100%;
     margin-bottom: 1rem;
     min-height: auto;
     padding: 1.5rem;
   }
-  
+
   .i-signs h4 {
     font-size: 1.6rem;
   }
 }
 
-/* Elimină orice efect care ar putea cauza ieșirea din ecran */
-.i-howMuch::after,
-.i-where::after,
-.i-when::after,
-.i-signs > div::after {
-  display: none !important;
-}
-
-/* Stilizare pentru prețuri (pentru How much?) */
 .i-howMuch span {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-/* Adaugă efecte decorative pentru fiecare card */
-.i-howMuch::after {
-  content: '';
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(248, 196, 1, 0.1);
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.i-where::after {
-  content: '';
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(248, 196, 1, 0.1);
-  border-radius: 10px;
-  transform: rotate(45deg);
-  opacity: 0.5;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
+.i-howMuch::after,
+.i-where::after,
 .i-when::after {
   content: '';
   position: absolute;
@@ -877,10 +757,24 @@ h2::after {
   right: 15px;
   width: 40px;
   height: 40px;
-  background-color: rgba(248, 196, 1, 0.05);
-  border-radius: 10px;
   opacity: 0.5;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-howMuch::after {
+  border: 2px solid rgba(248, 196, 1, 0.1);
+  border-radius: 50%;
+}
+
+.i-where::after {
+  border: 2px solid rgba(248, 196, 1, 0.1);
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+
+.i-when::after {
+  background-color: rgba(248, 196, 1, 0.05);
+  border-radius: 10px;
 }
 
 .i-signs > div:hover::after {
@@ -888,7 +782,6 @@ h2::after {
   transform: scale(1.2) rotate(45deg);
 }
 
-/* Modern how-to steps */
 .howto-step {
   position: relative;
   margin-bottom: 2rem;
@@ -900,8 +793,6 @@ h2::after {
   transition: all 0.3s ease;
   display: flex;
   padding: 1.5rem;
-  opacity: 1 !important;
-  transform: translateX(0) !important;
 }
 
 .howto-step:hover {
@@ -937,6 +828,9 @@ h2::after {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
+  animation: numberScale 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .howto-step-line {
@@ -953,6 +847,9 @@ h2::after {
   height: 100%;
   background: var(--primary);
   box-shadow: 0 0 10px rgba(248, 196, 1, 0.3);
+  animation: lineGrow 0.6s ease-out forwards;
+  animation-delay: 0.7s;
+  height: 0%;
 }
 
 .howto-step-text {
@@ -967,6 +864,9 @@ h2::after {
   margin-bottom: 0.75rem;
   color: var(--primary);
   position: relative;
+  animation: titleFadeIn 0.5s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
 }
 
 .howto-step-text-title::after {
@@ -985,9 +885,11 @@ h2::after {
   font-size: 1rem;
   line-height: 1.6;
   margin: 0.75rem 0 0;
+  animation: textFadeIn 0.5s ease-out forwards;
+  animation-delay: 1.1s;
+  opacity: 0;
 }
 
-/* Adaugă elemente decorative */
 .howto-step:nth-child(1)::after {
   content: '';
   position: absolute;
@@ -1025,24 +927,12 @@ h2::after {
   z-index: 0;
 }
 
-/* Stilizare modernă pentru titlul How to hack your summer */
 .howto-title {
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
   display: inline-block;
   padding-bottom: 1rem;
-}
-
-@media screen and (max-width: 480px) {
-  .howto-title {
-    font-size: 38px;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 1rem;
-  }
 }
 
 .howto-title::after {
@@ -1057,7 +947,6 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Stilul pentru fiecare pas */
 .howto-step:nth-child(1) {
   animation: stepSlideInRight 0.8s ease-out forwards;
 }
@@ -1092,13 +981,6 @@ h2::after {
   }
 }
 
-/* Animații pentru elementele interne */
-.howto-step-number h3 {
-  animation: numberScale 0.5s ease-out forwards;
-  animation-delay: 0.5s;
-  opacity: 0;
-}
-
 @keyframes numberScale {
   0% {
     transform: scale(0.8);
@@ -1110,12 +992,6 @@ h2::after {
   }
 }
 
-.howto-step-line .line {
-  animation: lineGrow 0.6s ease-out forwards;
-  animation-delay: 0.7s;
-  height: 0%;
-}
-
 @keyframes lineGrow {
   0% {
     height: 0%;
@@ -1123,18 +999,6 @@ h2::after {
   100% {
     height: 100%;
   }
-}
-
-.howto-step-text-title {
-  animation: titleFadeIn 0.5s ease-out forwards;
-  animation-delay: 0.9s;
-  opacity: 0;
-}
-
-.howto-step-text-p {
-  animation: textFadeIn 0.5s ease-out forwards;
-  animation-delay: 1.1s;
-  opacity: 0;
 }
 
 @keyframes titleFadeIn {
@@ -1155,29 +1019,6 @@ h2::after {
   }
 }
 
-/* Îmbunătățiri pentru efectul de hover */
-.howto-step:hover {
-  transform: translateY(-5px);
-  border-color: rgba(248, 196, 1, 0.3);
-}
-
-.howto-step:hover .howto-step-number h3 {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-  color: var(--primary);
-}
-
-.howto-step:hover .howto-step-text-title {
-  color: #FFA500;
-  transition: color 0.3s ease;
-}
-
-.howto-step:hover .line {
-  box-shadow: 0 0 15px rgba(248, 196, 1, 0.6);
-  transition: box-shadow 0.3s ease;
-}
-
-/* Modern calendar section - Uniformizat complet */
 #calendar {
   padding: 2rem 0;
 }
@@ -1202,7 +1043,6 @@ h2::after {
   margin: 0 auto;
 }
 
-/* Stilizare universală pentru toate rândurile */
 #calendar tr {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
@@ -1213,7 +1053,6 @@ h2::after {
   box-shadow: var(--shadow-sm);
 }
 
-/* Background pentru toate rândurile când nu sunt în hover */
 #calendar tr::before {
   content: '';
   position: absolute;
@@ -1227,7 +1066,6 @@ h2::after {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Efect de hover universal pentru toate rândurile */
 #calendar tr:hover {
   border-color: rgba(248, 196, 1, 0.6);
   transform: scale(1.03) translateY(-5px);
@@ -1239,7 +1077,6 @@ h2::after {
   background-color: var(--dark-lighter);
 }
 
-/* Linia verticală din stânga */
 #calendar tr::after {
   content: '';
   position: absolute;
@@ -1281,12 +1118,9 @@ h2::after {
 
 #calendar .leftc span {
   position: relative;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   text-align: center;
-  text-wrap: balance;
 }
 
-/* Efecte la hover pentru texte */
 #calendar tr:hover .leftc span {
   color: #FFA500;
   transform: scale(1.05);
@@ -1297,7 +1131,6 @@ h2::after {
   transform: translateX(5px);
 }
 
-/* Modern footer */
 .footer {
   background: var(--gradient-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1307,7 +1140,6 @@ h2::after {
   padding: var(--spacing-xl) 0;
 }
 
-/* Add modern animations */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1319,32 +1151,22 @@ h2::after {
   }
 }
 
-.home h1, .hometext, .homebutton {
-  animation: fadeUp 0.6s ease forwards;
-}
-
 .hometext {
+  animation: fadeUp 0.6s ease forwards;
   animation-delay: 0.2s;
 }
 
 .homebutton {
   animation-delay: 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: max-content;
-  font-weight: 700;
 }
 
-/* Modern image hover effects */
 .img-overlay {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-md);
-  aspect-ratio: 1/1; /* Asigură că imaginea este pătrată */
+  aspect-ratio: 1 / 1;
   display: block;
   width: 100%;
 }
@@ -1360,7 +1182,6 @@ h2::after {
   transform: scale(1.05);
 }
 
-/* Optimizare pentru iconițele social media */
 .instaHover {
   position: absolute;
   top: 50%;
@@ -1381,7 +1202,8 @@ h2::after {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.fa-facebook, .fa-instagram {
+.fa-facebook,
+.fa-instagram {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1408,7 +1230,6 @@ h2::after {
   opacity: 1;
 }
 
-/* Stilizare pentru secțiunea de carduri în ansamblu */
 .img-junk {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1422,7 +1243,6 @@ h2::after {
   color: white;
 }
 
-/* Stilizare pentru cardurile sociale media independente */
 .social-card {
   position: relative;
   width: 200px;
@@ -1466,7 +1286,6 @@ h2::after {
   color: #E1306C;
 }
 
-/* Stilizare modernă și elegantă pentru textul DevelopMe din hero */
 .left h1 {
   position: relative;
   font-weight: 900;
@@ -1479,7 +1298,6 @@ h2::after {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 8s ease infinite;
-  transform-origin: left;
 }
 
 .left h1::after {
@@ -1505,7 +1323,6 @@ h2::after {
   }
 }
 
-/* Îmbunătățiri pentru hometext */
 .left .hometext {
   color: var(--text-primary);
   display: flex;
@@ -1563,7 +1380,6 @@ h2::after {
   }
 }
 
-/* Animații pentru imaginea din hero */
 .right .rightIMG {
   position: relative;
   animation: floatImage 8s ease-in-out infinite;
@@ -1593,33 +1409,30 @@ h2::after {
   }
 }
 
-/* Animație pentru rama din jurul imaginii */
-.rightIMG::before {
-  content: "";
-  display: block;
-  width: 12vw;
-  height: 12vw;
-  position: absolute;
-  bottom: -.2vw;
-  left: -1.2vw;
-  border-bottom: 1.5px solid var(--primary);
-  border-left: 1.5px solid var(--primary);
-  opacity: 0.7;
-  animation: framePulse 6s ease-in-out infinite;
-}
-
+.rightIMG::before,
 .rightIMG::after {
   content: "";
   display: block;
   width: 12vw;
   height: 12vw;
   position: absolute;
+  opacity: 0.7;
+  animation: framePulse 6s ease-in-out infinite;
+}
+
+.rightIMG::before {
+  bottom: -0.2vw;
+  left: -1.2vw;
+  border-bottom: 1.5px solid var(--primary);
+  border-left: 1.5px solid var(--primary);
+}
+
+.rightIMG::after {
   top: -1.2vw;
   right: -1.2vw;
   border-top: 1.5px solid var(--primary);
   border-right: 1.5px solid var(--primary);
-  opacity: 0.7;
-  animation: framePulse 6s ease-in-out infinite reverse;
+  animation-direction: reverse;
 }
 
 @keyframes framePulse {
@@ -1633,12 +1446,11 @@ h2::after {
   }
 }
 
-/* Îmbunătățiri pentru responsive design */
 @media screen and (max-width: 992px) {
   .left h1 {
     font-size: 3.8rem;
   }
-  
+
   .left .hometext span p {
     font-size: 1.1rem;
   }
@@ -1648,7 +1460,7 @@ h2::after {
   .left h1 {
     font-size: 3.2rem;
   }
-  
+
   .left .hometext span p {
     font-size: 1rem;
   }
@@ -1658,13 +1470,12 @@ h2::after {
   .left h1 {
     font-size: 2.8rem;
   }
-  
+
   .left .hometext span p {
     font-size: 0.95rem;
   }
 }
 
-/* Animația pentru butonul înscrie-te */
 @keyframes buttonReveal {
   0% {
     opacity: 0;
@@ -1674,4 +1485,4 @@ h2::after {
     opacity: 1;
     transform: translateY(0);
   }
-} 
+}
